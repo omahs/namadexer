@@ -4,15 +4,15 @@ Namadexer is an indexer for [Namada](https://github.com/anoma/namada).
 
 ## Overview
 
-The project is composed of 2 entities : the `indexer` and the `server`. They are both written in Rust.
+The project is composed of 2 entities: the `indexer` and the `server`. They are both written in Rust.
 
 ![Namadexer graph](./docs/assets/namadexer.jpg)
 
 - the `indexer`: it connects to the Namada node through rpc and collect the blocks and transactions. Then it stores them in the postgres database. The indexer doesn't know about the server and can be started independently.
 
-- the `server`: it is a JSON server that allows querying block and transaction using unique identifier. Other useful endpoints like `/blocks/latest` can be found too. A list of all the endpoints and their description can be find in the documenttaion.
+- the `server`: it is a JSON server that allows querying block and transaction using unique identifier. Other useful endpoints like `/blocks/latest` can be found too. A list of all the endpoints and their description can be found in the documentation.
 
-Those services requires a connection to a [postgres](https://www.postgresql.org/) database. Support for [OpenTelemetry](https://opentelemetry.io/) was also added.
+Those services require a connection to a [postgres](https://www.postgresql.org/) database. Support for [OpenTelemetry](https://opentelemetry.io/) was also added.
 
 ## Documentation
 
@@ -26,12 +26,12 @@ You will need access to a namada node and inform its tendermint rpc host and por
 
 You will need rust installed and a running node of namada accessible locally.
 
-It will install teh right version of protoc (at least 3.12) in this repo to avoid conflict with other installed version
+It will install the right version of protoc (at least 3.12) in this repo to avoid conflict with other installed version
 ```
 $ make install-deps
 ```
 
-### Start developping
+### Start developing
 
 Start the docker database :
 ```
